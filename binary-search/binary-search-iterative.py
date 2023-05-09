@@ -2,7 +2,6 @@
 def binary_search(input_list, target):
     low = 0
     high = len(input_list) - 1
-    mid = 0
     while low <= high:
         mid = (high + low) // 2
         # If target is greater, ignore left half
@@ -11,7 +10,7 @@ def binary_search(input_list, target):
         # If target is smaller, ignore right half
         elif input_list[mid] > target:
             high = mid - 1
-        # else, it means target is present at mid
+        # else, target is present at mid
         else:
             return mid
     # If we reach here, then the Target was not present
